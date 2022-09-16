@@ -29,7 +29,7 @@
               <div>
                 <cld-context cloudName="dlesmrgip">
                   <div>
-                    <cld-image :publicId="publicId" class="imagen" alt="imgen"/>
+                    <cld-image :publicId="publicId" class="imagen" alt="imgen" id="avatar"/>
                   </div>
                 </cld-context>
               </div>
@@ -43,31 +43,37 @@
               <div class="row">
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="text" id="nombre" class="form-control" required
+                    <input type="text" id="Nombre" class="form-control" required
                       />
-                    <label class="form-label lb" for="nombre">Nombre</label>
+                    <label class="form-label lb" for="Nombre">Nombre</label>
                   </div>
                 </div>
                 <div class="col-md-6 mb-4">
                   <div class="form-outline">
-                    <input type="text" id="apellido" class="form-control"
+                    <input type="text" id="Apellido" class="form-control"
                       required/>
-                    <label class="form-label lb" for="apellido">Apellido</label>
+                    <label class="form-label lb" for="Apellido">Apellido</label>
                   </div>
                 </div>
               </div>
 
-              <!-- Eentrada correo electronico  -->
+              <!-- Correo -->
               <div class="form-outline mb-4">
-                <input type="email" id="correo" class="form-control" required/>
-                <label class="form-label lb" for="correo">Email</label>
+                <input type="email" id="Correo" class="form-control" required/>
+                <label class="form-label lb" for="Correo">Email</label>
               </div>
 
               <!-- Password input -->
               <div class="form-outline mb-4">
-                <input type="password" id="clave" class="form-control"
+                <input type="password" id="Clave" class="form-control"
                   required/>
-                <label class="form-label lb" for="clave">Password</label>
+                <label class="form-label lb" for="Clave">Password</label>
+              </div>
+
+              <!-- estado -->
+              <div class="form-outline mb-4">
+                <input type="text" id="Estado" class="form-control" required/>
+                <label class="form-label lb" for="Estado">Estado</label>
               </div>
 
               <!-- aceptar nuevo registro -->
