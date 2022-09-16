@@ -1,0 +1,83 @@
+<!-- Section: Design Block -->
+<section class="background-radial-gradient overflow-hidden">
+  <!-- <img src="../assets/BIENVENIDO.jpg" alt="fondo"/> -->
+  <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+    <div class="row gx-lg-5 align-items-center mb-5">
+      <div class="col-lg-6 mb-5 mb-lg-0 div1">
+        <h1 class="my-5 display-5 fw-bold ls-tight h11">
+          Sistema Liga <br />
+          <!-- <span class="span1">Analisis de sistemas II</span> -->
+        </h1>
+        <p class="mb-4 opacity-70 p1">
+          El sistema que permite al usuario autenticado crear las ligas que quiera, el usuario que crea las ligas automáticamente será el administrador de su liga y cualquier usuario que pertenezca a la liga podrá enviar invitaciones desde el mismo sistema a usuarios registrados o no registrados.
+        </p>
+      </div>
+
+      <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+        <div id="radius-shape-1" class="position-absolute rounded-circle
+          shadow-5-strong"></div>
+        <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+        <div class="card bg-glass">
+          <div class="card-body px-4 py-5 px-md-5">
+            <!-- <form  @submit.prevent="GuardarImagen()" method="post">
+                  <v-input type="file" @change="processFile($event)" class="form-control"/>
+                  <button type="submit" class="btn btn-primary btn-block mb-4">subir imagen</button>
+                </form> -->
+
+            <form>
+              <!-- avatar width="250" height="250" crop="scale"-->
+              <div>
+                <cld-context cloudName="dlesmrgip">
+                  <div>
+                    <cld-image :publicId="publicId" class="imagen" alt="imgen"/>
+                  </div>
+                </cld-context>
+              </div>
+              <div>
+                <br>
+                <button @click="openUploadModal" type="submit" class="btn
+                  btn-light btn-block mb-4"><u>Subir avatar</u></button>
+              </div>
+
+              <!-- Dos columnas nombres y apellidos -->
+              <div class="row">
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="text" id="nombre" class="form-control" required
+                      />
+                    <label class="form-label lb" for="nombre">Nombre</label>
+                  </div>
+                </div>
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    <input type="text" id="apellido" class="form-control"
+                      required/>
+                    <label class="form-label lb" for="apellido">Apellido</label>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Eentrada correo electronico  -->
+              <div class="form-outline mb-4">
+                <input type="email" id="correo" class="form-control" required/>
+                <label class="form-label lb" for="correo">Email</label>
+              </div>
+
+              <!-- Password input -->
+              <div class="form-outline mb-4">
+                <input type="password" id="clave" class="form-control"
+                  required/>
+                <label class="form-label lb" for="clave">Password</label>
+              </div>
+
+              <!-- aceptar nuevo registro -->
+              <button type="submit" class="btn btn-primary btn-block mb-4" id="colorbtn">
+                Aceptar
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
