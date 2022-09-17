@@ -1,0 +1,24 @@
+<body class="cuerpo">
+
+  <div class="container">
+    <div class="col-12">
+      <br>
+      <v-container fluid class="dashboard-page">
+        <strong><h3 class="text-center">CREAR LIGA</h3></strong>
+        <v-text class="text-xs-center">{{this.informacion}}</v-text>
+      </v-container>
+      <v-col cols="12"
+      sm="3">
+        <v-text-field
+        v-model="text"
+        :rules="rules"
+        counter="25"
+        hint="Nombre liga"
+        label="Ingrese nombre de liga"
+      ></v-text-field>
+
+      <button class="btn btn-primary" v-on:click="crearliga(text)">CREAR</button>
+      </v-col>
+    </div>
+  </div><br>
+</body>
