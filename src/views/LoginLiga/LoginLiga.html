@@ -1,47 +1,55 @@
 <!-- Section: Design Block -->
 <section class="background-radial-gradient overflow-hidden">
-    <!-- <img src="../assets/BIENVENIDO.jpg" alt="fondo"/> -->
-    <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
-      <div class="row gx-lg-5 align-items-center mb-5">
-        <div class="col-lg-6 mb-5 mb-lg-0 div1">
-          <h1 class="my-5 display-5 fw-bold ls-tight h11">
-            Bienvenido <br />
-            <span class="span1">Sistema Liga</span>
-          </h1>
-        </div>
-  
-        <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
-          <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
-          <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
-  
-          <div class="card bg-glass">
-            <div class="card-body px-4 py-5 px-md-5">
-              <form>  
-                <!-- Email input -->
-                <div class="form-outline mb-4">
-                  <input type="email" id="email" class="form-control" required/>
-                  <label class="form-label labelcenter" for="email">Correo electronico</label>
-                </div>
-  
-                <!-- Password input -->
-                <div class="form-outline mb-4">
-                  <input type="password" id="password" class="form-control" required/>
-                  <label class="form-label labelcenter" for="password">Password</label>
-                </div>
-  
-                <!-- Suscribirse -->
-                <div class="d-flex justify-content-center mb-4">
+  <!-- <img src="../assets/BIENVENIDO.jpg" alt="fondo"/> -->
+  <div class="container px-4 py-5 px-md-5 text-center text-lg-start my-5">
+    <div class="row gx-lg-5 align-items-center mb-5">
+      <div class="col-lg-6 mb-5 mb-lg-0 div1">
+        <h1 class="my-5 display-5 fw-bold ls-tight h11">
+          Bienvenido <br />
+          <span class="span1">Sistema Liga</span>
+        </h1>
+      </div>
+
+      <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+        <div id="radius-shape-1" class="position-absolute rounded-circle
+          shadow-5-strong"></div>
+        <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+        <div class="card bg-glass">
+          <div class="card-body px-4 py-5 px-md-5">
+            <form>
+              <!-- Email input -->
+              <div class="form-outline mb-4">
+                <v-text-field
+                  v-model="email"
+                  :rules="rules"
+                  label="example@gmail.com" type="email"></v-text-field>
+                <label class="form-label labelcenter" for="email">Correo
+                  electronico</label>
+              </div>
+
+              <!-- Password input -->
+              <div class="form-outline mb-4">
+                <v-text-field
+                  v-model="pass"
+                  :rules="rules" type="password"></v-text-field>
+                <label class="form-label labelcenter" for="password">Password</label>
+              </div>
+
+              <!-- Suscribirse -->
+              <div class="d-flex justify-content-center mb-4">
+                <router-link to="/menu">Menu</router-link>
                 <router-link to="/registro">Registrarse</router-link>
-                </div>
-  
-                <!-- Submit button -->
-                <b-button type="submit" class="btn btn-primary btn-block mb-4" id="color">
-                  <v-tab id="color" to="/menu">Sign up</v-tab>
-                </b-button>
-              </form>
-            </div>
+              </div>
+
+              <!-- Submit button -->
+              <b-button type="submit" class="btn btn-primary btn-block mb-4"
+                id="color">
+                <v-tab id="color" to="/menu">Sign up</v-tab>
+              </b-button>
+            </form>
           </div>
         </div>
       </div>
     </div>
-  </section>
+  </div>
+</section>

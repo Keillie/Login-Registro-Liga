@@ -3,7 +3,7 @@
   <div class="container">
     <div class="col-12">
       <br>
-            <!-- <div>
+            <div>
         <v-container fluid class="dashboard-page">
           <strong><h3 class="text-center">BUSCAR LIGAS</h3></strong>
           <v-text class="text-xs-center">{{this.informacion}}</v-text>
@@ -12,7 +12,7 @@
       <div id="app">
         {{ info }}
       </div>
-      <!-- <v-col cols="12"
+      <v-col cols="12"
       sm="3">
         <v-text-field
         v-model="text"
@@ -32,10 +32,10 @@
 
         <v-data-table :headers="headers_tabla" :items="datoLigas" v-for:>
          <template v-slot:item.action="{ item }">
-          <button class="btn btn-success" v-on:click="buscarLiga(text)">AGREGARME</button>
+          <button class="btn btn-success" v-on:click="agregarme(item.id_Liga)">AGREGARME</button>
         </template>
         </v-data-table>
-      </div> -->
+      </div>
     </div>
   </div><br>
 </body>

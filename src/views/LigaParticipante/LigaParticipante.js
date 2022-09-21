@@ -1,4 +1,4 @@
-
+import api from "@/consfig/api";
 
 export default {
   async mounted() {
@@ -8,26 +8,28 @@ export default {
   data: () => ({
     informacion: "Buscar las ligas disponibles",
     arrayClasificados: [],
-    datoLigas: [{Numero: 1, Confederacion: 'UEFA', Grupo: 'Grupo G', Nombre: 'Serbia'},
-    {Numero: 1, Confederacion: 'UEFA', Grupo: 'Grupo G', Nombre: 'Serbia'},
-    {Numero: 1, Confederacion: 'UEFA', Grupo: 'Grupo G', Nombre: 'Serbia'},
-    {Numero: 1, Confederacion: 'UEFA', Grupo: 'Grupo G', Nombre: 'Serbia'},
-    {Numero: 1, Confederacion: 'UEFA', Grupo: 'Grupo G', Nombre: 'Serbia'},
-    {Numero: 1, Confederacion: 'UEFA', Grupo: 'Grupo G', Nombre: 'Serbia'},
-    {Numero: 1, Confederacion: 'UEFA', Grupo: 'Grupo G', Nombre: 'Serbia'},
-    {Numero: 2, Confederacion: 'UEFA', Grupo: 'Grupo G', Nombre: 'Serbia'},
-    {Numero: 1, Confederacion: 'UEFA', Grupo: 'Grupo G', Nombre: 'Serbia'},],
-    id: 1,
-    titulo: "LIGAS",
+     titulo: "LIGAS",
+     participantes:[],
   }),
 
   computed: {},
 
   methods: {
+ 
     async ver() {
-    
-      this.arrayClasificados = [];
-
+      await api.get("/participante", {}).then((response) => {
+        if (response.status === 200) {
+          console.log("aca");
+          this.participantes = response.data;
+        } else {
+          this.$toast.error(
+            "ERROR AL CARGAR LOS REGISTROS, INTENTE NUEVAMENTE",
+            {
+              position: "top-right",
+            }
+          );
+        }
+      });
     },
 
     buscarLiga() {},

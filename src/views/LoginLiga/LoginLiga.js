@@ -1,21 +1,27 @@
-  export default {
-    async mounted() {
+import api from "@/consfig/api";
 
-    },
-  
-    data: () => ({
+export default {
+  async mounted() {},
 
-    }),
-  
-    computed: {},
-  
-    methods: {
-        Registrarse(msg, view) {
-            // Comprobas todo lo que sea necesario
-            // y finalmente redireccionas
-            // ...
-             this.$router.push(view.path)
-           }
+  data: () => ({}),
+
+  computed: {},
+
+  methods: {
+    async ingreso() {
+      await api.post("/correo/clave", {}).then((response) => {
+        if (response.status === 200) {
+          console.log("aca");
+          this.participantes = response.data;
+        } else {
+          this.$toast.error(
+            "ERROR AL Ingresar",
+            {
+              position: "top-right",
+            }
+          );
+        }
+      });
     },
-  };
-  
+  },
+};

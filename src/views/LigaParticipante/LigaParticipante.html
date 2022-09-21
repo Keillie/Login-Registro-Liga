@@ -1,5 +1,5 @@
 <body>
-  <div class="container" v-show="id==1">
+  <div class="container">
     <div class="col-12">
       <br>  
       <div>
@@ -22,8 +22,8 @@
             </tr>
           </thead>
           <tbody >
-            <tr v-for="item in datoLigas" v-bind:key="item"> <!-- Recorremos nuestro array -->
-              <td>{{item.Numero}}</td>
+            <tr v-for="item in participantes" v-bind:key="item"> <!-- Recorremos nuestro array -->
+              <td>{{item.id_Liga}}</td>
        
               <td>{{item.Nombre}}</td>
               <td><btn type="button" class="btn btn-primary" v-on:click="buscar(item.Numero)">VER</btn></td>
