@@ -10,14 +10,14 @@
       <v-col cols="12"
       sm="3">
         <v-text-field
-        v-model="text"
+        v-model="nombreliga"
         :rules="rules"
         counter="25"
         hint="Nombre liga"
         label="Ingrese nombre de liga"
       ></v-text-field>
 
-      <button class="btn btn-primary" v-on:click="crearliga(text)">CREAR</button>
+      <button class="btn btn-primary" @click="crearliga()">CREAR</button>
       </v-col>
     </div>
   </div><br>

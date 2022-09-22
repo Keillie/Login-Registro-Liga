@@ -40,7 +40,8 @@ export default {
         avatar:this.url,
         estado:1,
       })
-
+      this.$router.push("/menu");
+      alert("Registrado " + this.email);
     },
   }
 }
