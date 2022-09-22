@@ -30,7 +30,7 @@
               <!-- Password input -->
               <div class="form-outline mb-4">
                 <v-text-field
-                  v-model="pass"
+                  v-model="passo"
                   :rules="rules" type="password"></v-text-field>
                 <label class="form-label labelcenter" for="password">Password</label>
               </div>
@@ -42,9 +42,8 @@
               </div>
 
               <!-- Submit button -->
-              <b-button type="submit" class="btn btn-primary btn-block mb-4"
-                id="color">
-                <v-tab id="color" to="/menu">Sign up</v-tab>
+              <b-button class="btn btn-primary btn-block mb-4" id="color" @click="ingresar()">
+                ACEPTAR
               </b-button>
             </form>
           </div>

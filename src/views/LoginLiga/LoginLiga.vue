@@ -4,8 +4,4 @@
 @import url("./LoginLiga.scss");
 </style>
 
-<script>
-    export default {
-  name: "LoginLiga",
-};
-</script>
+<script src="./LoginLiga.js"> </script>

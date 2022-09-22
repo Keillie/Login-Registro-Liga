@@ -10,4 +10,4 @@
 };
 </script> -->
 
-<script src="./RegistroLiga.js"> </script> -->
+<script src="./RegistroLiga.js"> </script>
